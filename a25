@@ -1,0 +1,29 @@
+//کد اول
+
+final AlertDialog dialog = new AlertDialog.Builder(MainActivity.this).create();
+LayoutInflater inflater = getLayoutInflater();
+//mode by sketchware helper
+View convertView = (View) inflater.inflate(R.layout.custom_dialog, null);
+dialog.setView(convertView); 
+dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+
+//متن یک
+TextView b1 = (TextView)
+convertView.findViewById(R.id.b1);
+
+//متن دو
+
+TextView b2 = (TextView)
+convertView.findViewById(R.id.b2);
+
+//کد دکمه
+
+Button bt1 = (Button)
+convertView.findViewById(R.id.bt1);
+
+//کد لاینر
+
+LinearLayout bg = (LinearLayout) convertView.findViewById(R.id.bg);
+
+//کد نمایش دیالوگ
+dialog.show();
