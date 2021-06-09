@@ -1,0 +1,7 @@
+
+Animation anim =new AlphaAnimation(0.0f,1.0f); 
+anim.setDuration(50);
+anim.setStartOffset(20);
+anim.setRepeatMode(Animation.REVERSE);
+anim.setRepeatCount(Animation.INFINITE);
+textview1.startAnimation(anim);
