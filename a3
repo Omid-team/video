@@ -1,5 +1,28 @@
-{
-  "text": "شما در این اموزش یاد میگیرید که چطور یه دکمه ای بسازیر که وقتی روش کلیک شد متنی کپی شود",
-  "code": "",
-  "s": "مبتدی"
+android.content.pm.ShortcutManager shortcutManager = null;
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
+	shortcutManager = getSystemService(android.content.pm.ShortcutManager.class);
+}
+if (shortcutManager != null) {
+	android.content.pm.ShortcutInfo shortcut_1 = new android.content.pm.ShortcutInfo.Builder(MainActivity.this, "Activity1")
+	.setShortLabel("Activity1")
+	.setLongLabel("Activity1")
+	.setRank(0)
+	.setIntent(new android.content.Intent(android.content.Intent.ACTION_VIEW, null, MainActivity.this, Ac1Activity.class))
+	.setIcon(android.graphics.drawable.Icon.createWithResource(MainActivity.this, R.drawable.img))
+	.build();
+	android.content.pm.ShortcutInfo shortcut_2 = new android.content.pm.ShortcutInfo.Builder(MainActivity.this, "Activity2")
+	.setShortLabel("Browser")
+	.setLongLabel("Open Browser")
+	.setRank(1)
+	.setIntent(new android.content.Intent(android.content.Intent.ACTION_VIEW, Uri.parse("https://google.com")))
+	.setIcon(android.graphics.drawable.Icon.createWithResource(MainActivity.this, R.drawable.img))
+	.build();
+	android.content.pm.ShortcutInfo shortcut_3 = new android.content.pm.ShortcutInfo.Builder(MainActivity.this, "Activity3")
+	.setShortLabel("Activity2")
+	.setLongLabel("Activity2")
+	.setRank(2)
+	.setIntent(new android.content.Intent(android.content.Intent.ACTION_VIEW, null, MainActivity.this, Ac2Activity.class))
+	.setIcon(android.graphics.drawable.Icon.createWithResource(MainActivity.this, R.drawable.img))
+	.build();
+	shortcutManager.setDynamicShortcuts(java.util.Arrays.asList(shortcut_1, shortcut_2, shortcut_3));
 }
