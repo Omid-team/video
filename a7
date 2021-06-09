@@ -27,3 +27,4 @@ LinearLayout bg = (LinearLayout) convertView.findViewById(R.id.bg);
 
 //کد نمایش دیالوگ
 dialog.show();
+
