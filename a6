@@ -1,0 +1,3 @@
+//create by sketchware helper
+
+final TextView mytext = new TextView(MainActivity.this); mytext.setText("Your Text"); mytext.setTextColor(0xFF000000); mytext.setLayoutParams(new LinearLayout.LayoutParams(android.widget.LinearLayout.LayoutParams.WRAP_CONTENT, android.widget.LinearLayout.LayoutParams.WRAP_CONTENT)); linear1.addView(mytext);
